@@ -1,0 +1,36 @@
+<div class="modal fade" id="modalDelete" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Hapus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Yakin dihapus?</p>
+                <form action="?" method="post" style="display: none;" id="formDelete">
+                    <?php echo csrf_field(); ?>
+                    <?php echo method_field('DELETE'); ?>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-danger" id="yesDelete">Ya</button>
+            </div>
+        </div>
+    </div>
+</div>
+<?php $__env->startPush('scripts'); ?>
+<script>
+$(function() {
+    $('#modalDelete').on('show.bs.modal', function(event) {
+        var url = $(event.relatedTarget).data('url');
+        $(this).find('#formDelete').attr('action', url);
+    });
+    $('#yesDelete').click(function() {
+        $('#formDelete').submit();
+    });
+})
+</script>
+<?php $__env->stopPush(); ?><?php /**PATH C:\laragon\www\mugon-tokas\resources\views/components/modal-delete.blade.php ENDPATH**/ ?>
