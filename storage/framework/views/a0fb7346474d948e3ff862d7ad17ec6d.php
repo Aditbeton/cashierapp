@@ -40,4 +40,5 @@
 
 <form id="form-logout" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
     <?php echo csrf_field(); ?>
-</form><?php /**PATH C:\laragon\www\mugon-tokas\resources\views/layouts/navbar.blade.php ENDPATH**/ ?>
+</form>
+<?php /**PATH C:\laragon\www\mugon-tokas\resources\views/layouts/navbar.blade.php ENDPATH**/ ?>

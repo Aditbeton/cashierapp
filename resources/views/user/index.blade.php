@@ -23,7 +23,7 @@ User
 </x-alert>
 @endif
 
-<div class="card card-orange card-outline">
+<div class="card card-red card-outline">
     <div class="card-header form-inline">
         <a href="{{ route('user.create') }}" class="btn btn-primary">
             <i class="fas fa-plus mr-2"></i> Tambah
@@ -48,6 +48,7 @@ User
                     <th>No</th>
                     <th>Nama</th>
                     <th>Username</th>
+                    <th>Role</th>
                     <th></th>
                 </tr>
             </thead>
@@ -57,6 +58,7 @@ User
                     <td>{{ $users->firstItem() + $key }}</td>
                     <td>{{ $user->nama }}</td>
                     <td>{{ $user->username }}</td>
+                    <td>{{ $user->role }}</td>
                     <td class="text-right">
                         <a href="{{ route('user.edit', ['user' => $user->id]) }}"
                             class="btn btn-xs text-success p-2 mr-1">

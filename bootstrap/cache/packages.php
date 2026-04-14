@@ -1,4 +1,15 @@
 <?php return array (
+  'jackiedo/cart' => 
+  array (
+    'aliases' => 
+    array (
+      'Cart' => 'Jackiedo\\Cart\\Facades\\Cart',
+    ),
+    'providers' => 
+    array (
+      0 => 'Jackiedo\\Cart\\CartServiceProvider',
+    ),
+  ),
   'laravel/sail' => 
   array (
     'providers' => 

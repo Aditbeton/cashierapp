@@ -15,7 +15,7 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
                 <button type="button" class="btn btn-danger" id="yesDelete">Ya</button>
             </div>
         </div>
@@ -33,4 +33,5 @@ $(function() {
     });
 })
 </script>
-<?php $__env->stopPush(); ?><?php /**PATH C:\laragon\www\mugon-tokas\resources\views/components/modal-delete.blade.php ENDPATH**/ ?>
+<?php $__env->stopPush(); ?>
+<?php /**PATH C:\laragon\www\mugon-tokas\resources\views/components/modal-delete.blade.php ENDPATH**/ ?>

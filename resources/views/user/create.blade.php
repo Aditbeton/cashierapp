@@ -7,7 +7,7 @@ User
 @section('content')
 <div class="row">
     <div class="col-xl-4 col-lg-6">
-        <form method="POST" action="{{ route('user.store') }}" class="card card-orange card-outline">
+        <form method="POST" action="{{ route('user.store') }}" class="card card-red card-outline">
             <div class="card-header">
                 <h3 class="card-title">Buat User Baru</h3>
             </div>

@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('title-content'); ?>
 <i class="fas fa-user-tie mr-2"></i>
 User
@@ -77,7 +76,7 @@ User
 <?php endif; ?>
 <?php endif; ?>
 
-<div class="card card-orange card-outline">
+<div class="card card-red card-outline">
     <div class="card-header form-inline">
         <a href="<?php echo e(route('user.create')); ?>" class="btn btn-primary">
             <i class="fas fa-plus mr-2"></i> Tambah
@@ -102,6 +101,7 @@ User
                     <th>No</th>
                     <th>Nama</th>
                     <th>Username</th>
+                    <th>Role</th>
                     <th></th>
                 </tr>
             </thead>
@@ -111,6 +111,7 @@ User
                     <td><?php echo e($users->firstItem() + $key); ?></td>
                     <td><?php echo e($user->nama); ?></td>
                     <td><?php echo e($user->username); ?></td>
+                    <td><?php echo e($user->role); ?></td>
                     <td class="text-right">
                         <a href="<?php echo e(route('user.edit', ['user' => $user->id])); ?>"
                             class="btn btn-xs text-success p-2 mr-1">
@@ -157,4 +158,5 @@ User
 <?php unset($__componentOriginal47243a3de3ed132c2f9157dc8e8a8bd7); ?>
 <?php endif; ?>
 <?php $__env->stopPush(); ?>
+
 <?php echo $__env->make('layouts.main', ['title' => 'User'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\mugon-tokas\resources\views/user/index.blade.php ENDPATH**/ ?>

@@ -8,7 +8,7 @@ User
 @section('content')
 <div class="row">
     <div class="col-xl-4 col-lg-6">
-        <form method="POST" class="card card-orange card-outline"
+        <form method="POST" class="card card-red card-outline"
             action="{{ route('user.update', ['user' => $user->id]) }}">
             <div class="card-header">
                 <h3 class="card-title">Ubah User</h3>

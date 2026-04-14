@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('title-content'); ?>
 <i class="fas fa-user mr-2"></i>
 Profile
@@ -29,7 +28,7 @@ Profile
 <?php unset($__componentOriginal5194778a3a7b899dcee5619d0610f5cf); ?>
 <?php endif; ?>
         <?php endif; ?>
-        <div class="card card-orange card-outline">
+        <div class="card card-red card-outline">
             <div class="card-body">
                 <p>Nama: <strong><?php echo e($user->nama); ?></strong></p>
                 <p>Username: <?php echo e($user->username); ?></p>
@@ -43,4 +42,5 @@ Profile
     </div>
 </div>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layouts.main', ['title' => 'Profile'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\mugon-tokas\resources\views/user/profile.blade.php ENDPATH**/ ?>

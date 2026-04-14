@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php echo e(config('app.name')); ?><?php echo e(isset($title) ? ' '.$title : ''); ?></title>
+    <title><?php echo e(config('app.name')); ?><?php echo e(isset($title) ? ' ' . $title : ''); ?></title>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <link rel="stylesheet" href="/adminlte/plugins/fontawesome-free/css/all.min.css">
@@ -18,17 +18,17 @@
         <?php echo $__env->make('layouts.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
         <div class="content-wrapper">
             <?php if (! empty(trim($__env->yieldContent('title-content')))): ?>
-            <section class="content-header">
-                <div class="container-fluid">
-                    <div class="row mb-2">
-                        <div class="col-sm-6">
-                            <h1>
-                                <?php echo $__env->yieldContent('title-content'); ?>
-                            </h1>
+                <section class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2">
+                            <div class="col-sm-6">
+                                <h1>
+                                    <?php echo $__env->yieldContent('title-content'); ?>
+                                </h1>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
             <?php endif; ?>
             <section class="content">
                 <?php echo $__env->yieldContent('content'); ?>
@@ -40,7 +40,10 @@
     <script src="/adminlte/plugins/jquery/jquery.min.js"></script>
     <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/adminlte/dist/js/adminlte.min.js?v=3.2.0"></script>
+    <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/adminlte/plugins/chart.js/Chart.min.js"></script>
 </body>
 <?php echo $__env->yieldPushContent('scripts'); ?>
 
-</html><?php /**PATH C:\laragon\www\mugon-tokas\resources\views/layouts/main.blade.php ENDPATH**/ ?>
+</html>
+<?php /**PATH C:\laragon\www\mugon-tokas\resources\views/layouts/main.blade.php ENDPATH**/ ?>

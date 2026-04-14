@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    public function login (Request $request)
+    public function login(Request $request)
     {
         $cred = $request->validate([
             'username' => ['required', 'exists:users'],
@@ -21,9 +21,9 @@ class AuthController extends Controller
         ])->onlyInput(' username');
     }
 
-    public function logout (Request $request)
+    public function logout(Request $request)
     {
-        Auth:: logout();
+        Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/login');

@@ -6,7 +6,7 @@ Profile
 @section('content')
 <div class="row">
     <div class="col-x1-4 col-lg-6">
-        <form class="card card-orange card-outline" method="POST" action="{{ route('profile.update') }}">
+        <form class="card card-red card-outline" method="POST" action="{{ route('profile.update') }}">
             <div class="card-body">
                 @csrf
                 @method('PUT')

@@ -11,7 +11,7 @@ Profile
             <strong>Berhasil diupdate!</strong> Profile berhasil diupdate.
         </x-alert>
         @endif
-        <div class="card card-orange card-outline">
+        <div class="card card-red card-outline">
             <div class="card-body">
                 <p>Nama: <strong>{{ $user->nama }}</strong></p>
                 <p>Username: {{ $user->username }}</p>

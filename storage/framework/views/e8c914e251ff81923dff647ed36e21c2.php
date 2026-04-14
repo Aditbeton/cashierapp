@@ -14,23 +14,53 @@
 <body class="login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="/"><b>Madu</b>Jawa</a>
+            
+            <?php
+                $appName = config('app.name'); // "LapetShop"
+                $lapet = substr($appName, 0, 5); // "Lapet"
+                $shop = substr($appName, 5); // "Shop"
+            ?>
+            <span style="filter: drop-shadow(0px 5px 6px rgba(0, 0, 0, 0.45));">
+                <span class="brand-text text-danger"
+                    style="font-family: Fredoka, sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: normal;
+  text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;"><?php echo e($lapet); ?></span>
+                <span class="brand-text"
+                    style="color:white; font-family: Fredoka, sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: width: 100;
+  text-shadow:
+        -1px -1px 0 black,
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;  "><?php echo e($shop); ?></span>
+            </span>
         </div>
         <div class="card">
-            <div class="card-body login-card-body">
+            <div class="card-body login-card-body card card-red card-outline">
                 <p class="login-box-msg">Masuk untuk memulai sesi Anda</p>
                 <form action="/login" method="post">
                     <?php echo csrf_field(); ?>
                     <div class="input-group">
-                        <input type="text" name="username" class="form-control <?php $__errorArgs = ['username'];
+                        <input type="text" name="username"
+                            class="form-control <?php $__errorArgs = ['username'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
-unset($__errorArgs, $__bag); ?>"
-                            placeholder="Username">
+unset($__errorArgs, $__bag); ?>" placeholder="Username">
                         <div class="input-group-append">
                             <div class="input-group-text">
                                 <span class="fas fa-envelope"></span>
@@ -42,10 +72,10 @@ $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                    <div class="d-block invalid-feedback">
-                        <?php echo e($message); ?>
+                        <div class="d-block invalid-feedback">
+                            <?php echo e($message); ?>
 
-                    </div>
+                        </div>
                     <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
@@ -71,10 +101,10 @@ $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
 $message = $__bag->first($__errorArgs[0]); ?>
-                    <div class="d-block invalid-feedback">
-                        <?php echo e($message); ?>
+                        <div class="d-block invalid-feedback">
+                            <?php echo e($message); ?>
 
-                    </div>
+                        </div>
                     <?php unset($message);
 if (isset($__messageOriginal)) { $message = $__messageOriginal; }
 endif;
@@ -84,12 +114,12 @@ unset($__errorArgs, $__bag); ?>
                             <div class="icheck-primary">
                                 <input type="checkbox" name="remember" id="remember">
                                 <label for="remember">
-                                    Ingatkan Saya
+                                    Ingat Saya
                                 </label>
                             </div>
                         </div>
                         <div class="col-4">
-                            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                            <button type="submit" class="btn btn-primary btn-block">Masuk</button>
                         </div>
                     </div>
                 </form>
@@ -101,4 +131,5 @@ unset($__errorArgs, $__bag); ?>
     <script src="/adminlte/dist/js/adminlte.min.js?v=3.2.0"></script>
 </body>
 
-</html><?php /**PATH C:\laragon\www\mugon-tokas\resources\views/auth/login.blade.php ENDPATH**/ ?>
+</html>
+<?php /**PATH C:\laragon\www\mugon-tokas\resources\views/auth/login.blade.php ENDPATH**/ ?>

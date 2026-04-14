@@ -1,4 +1,3 @@
-
 <?php $__env->startSection('title-content'); ?>
 <i class="fas fa-user-tie mr-2"></i>
 User
@@ -7,7 +6,7 @@ User
 <?php $__env->startSection('content'); ?>
 <div class="row">
     <div class="col-xl-4 col-lg-6">
-        <form method="POST" action="<?php echo e(route('user.store')); ?>" class="card card-orange card-outline">
+        <form method="POST" action="<?php echo e(route('user.store')); ?>" class="card card-red card-outline">
             <div class="card-header">
                 <h3 class="card-title">Buat User Baru</h3>
             </div>
@@ -147,4 +146,5 @@ User
     </div>
 </div>
 <?php $__env->stopSection(); ?>
+
 <?php echo $__env->make('layouts.main', ['title' => 'User'], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\laragon\www\mugon-tokas\resources\views/user/create.blade.php ENDPATH**/ ?>
